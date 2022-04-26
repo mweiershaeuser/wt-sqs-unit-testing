@@ -2,7 +2,6 @@
   "name": "wt-qs-workshop",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "author": "Melvin Weiershäuser",
   "contributors": [
     {
@@ -19,11 +18,14 @@
   },
   "homepage": "https://github.com/mweiershaeuser/wt-qs-workshop#readme",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^28.0.1",
     "jest": "^27.5.1"
   }
 }
