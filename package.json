@@ -1,0 +1,31 @@
+{
+  "name": "wt-qs-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Melvin Weiershäuser",
+  "contributors": [
+    {
+      "name": "Daniel Heuser"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mweiershaeuser/wt-qs-workshop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mweiershaeuser/wt-qs-workshop/issues"
+  },
+  "homepage": "https://github.com/mweiershaeuser/wt-qs-workshop#readme",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^28.0.1",
+    "jest": "^27.5.1"
+  }
+}
