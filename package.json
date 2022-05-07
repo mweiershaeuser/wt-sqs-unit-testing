@@ -1,7 +1,6 @@
 {
-  "name": "wt-qs-workshop",
+  "name": "wt-sqs-unit-testing",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Melvin Weiershäuser",
   "contributors": [
     {
@@ -11,16 +10,23 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mweiershaeuser/wt-qs-workshop.git"
+    "url": "https://github.com/mweiershaeuser/wt-sqs-unit-testing.git"
   },
   "bugs": {
-    "url": "https://github.com/mweiershaeuser/wt-qs-workshop/issues"
+    "url": "https://github.com/mweiershaeuser/wt-sqs-unit-testing/issues"
   },
-  "homepage": "https://github.com/mweiershaeuser/wt-qs-workshop#readme",
+  "homepage": "https://github.com/mweiershaeuser/wt-sqs-unit-testing#readme",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:tasks": "jest tasks",
+    "test:tasks:coverage": "jest --coverage tasks",
+    "test:tasks:03": "jest tasks/03_tdd",
+    "test:tasks:03:coverage": "jest --coverage tasks/03_tdd",
+    "test:solutions": "jest solutions",
+    "test:solutions:coverage": "jest --coverage solutions",
+    "test:solutions:03": "jest solutions/03_tdd",
+    "test:solutions:03:coverage": "jest --coverage solutions/03_tdd"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
