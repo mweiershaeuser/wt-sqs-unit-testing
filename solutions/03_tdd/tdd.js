@@ -9,52 +9,34 @@ export function getWorkingTime(startTime, endTime, breaks = []) {
     convertTimeStringToHoursAndMinutes(startTime);
   const [endHours, endMinutes] = convertTimeStringToHoursAndMinutes(endTime);
 
+  let result;
   let resultHours;
   let resultMinutes;
 
-  if (
-    startHours > endHours ||
-    (startHours === endHours && startMinutes >= endMinutes)
-  ) {
+  // Anfangs- und Endzeit in Minuten seit Tagesbeginn.
+  const start = startHours * 60 + startMinutes;
+  const end = endHours * 60 + endMinutes;
+
+  if (start >= end) {
     throw new Error("End time must be greater than start time!");
   }
 
-  resultHours = endHours - startHours;
+  result = end - start;
 
-  if (endMinutes >= startMinutes) {
-    resultMinutes = endMinutes - startMinutes;
-  } else {
-    resultHours--;
-    resultMinutes = 60 - Math.abs(startMinutes - endMinutes);
-  }
-
-  [resultHours, resultMinutes] = subtractBreaks(
-    resultHours,
-    resultMinutes,
-    breaks
-  );
-
-  return convertHoursAndMinutesToTimeString(resultHours, resultMinutes);
-}
-
-function subtractBreaks(resultHours, resultMinutes, breaks) {
-  if (resultMinutes + 60 * resultHours < breaks.reduce((a, b) => a + b, 0)) {
+  // Array.reduce wird genutzt, um alle Elemente des Arrays zu summieren.
+  if (breaks.reduce((a, b) => a + b, 0) > result) {
     throw new Error("Breaks can not be bigger than time span!");
   }
 
   breaks.forEach((b) => {
-    let breakHours = Math.trunc(b / 60);
-    let breakMinutes = b % 60;
-
-    resultHours = resultHours - breakHours;
-    if (resultMinutes >= breakMinutes) {
-      resultMinutes = resultMinutes - breakMinutes;
-    } else {
-      resultHours--;
-      resultMinutes = 60 - Math.abs(resultMinutes - breakMinutes);
-    }
+    result = result - b;
   });
-  return [resultHours, resultMinutes];
+
+  // Math.trunc rundet ab zum Integer-Wert
+  resultHours = Math.trunc(result / 60);
+  resultMinutes = result % 60;
+
+  return convertHoursAndMinutesToTimeString(resultHours, resultMinutes);
 }
 
 function convertTimeStringToHoursAndMinutes(timeString) {

@@ -10,6 +10,8 @@
  *
  * npm run test:tasks:03:coverage
  *
+ * Solltest du weitere Hilfestellung brauchen, findest du diese am Ende der Datei.
+ *
  * @param {string} startTime start of working day in format "HH:MM" (24-hour format)
  * @param {string} endTime end of working day in format "HH:MM" (24-hour format)
  * @param {number[]} breaks breaks, given in minutes
@@ -24,24 +26,13 @@ export function getWorkingTime(startTime, endTime, breaks = []) {
     convertTimeStringToHoursAndMinutes(startTime);
   const [endHours, endMinutes] = convertTimeStringToHoursAndMinutes(endTime);
 
+  let result; // HELP: Soll Ergebnis in "Minuten seit Tagesbeginn" halten
   let resultHours;
   let resultMinutes;
 
   // ToDo
 
-  [resultHours, resultMinutes] = subtractBreaks(
-    resultHours,
-    resultMinutes,
-    breaks
-  );
-
   return convertHoursAndMinutesToTimeString(resultHours, resultMinutes);
-}
-
-function subtractBreaks(resultHours, resultMinutes, breaks) {
-  // ToDo
-
-  return [resultHours, resultMinutes];
 }
 
 function convertTimeStringToHoursAndMinutes(timeString) {
@@ -53,3 +44,11 @@ function convertHoursAndMinutesToTimeString(hours, minutes) {
     .toString()
     .padStart(2, "0")}`;
 }
+
+/**
+ * HELP
+ *
+ * Umrechnung von Minuten seit Tagesbeginn in separate Werte Stunden & Minuten.
+ * Stunden: Math.trunc() rundet Floats ab zu einem Integer-Wert.
+ * Minuten: Modulo-Operation (Operator %) ergibt "übrige" Minuten.
+ */
