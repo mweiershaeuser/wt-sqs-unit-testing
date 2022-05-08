@@ -18,4 +18,8 @@ npm i
 Im Ordner **tasks** findet ihr die Aufgaben zu den Coding-Sessions. Jede Coding Aufgabe hat eine **.js** Datei, die den Code und eine dazugehörige **.spec.js** Datei, die die Test-Cases beinhaltet. In diesen Ordnern werdet ihr arbeiten. Solltet ihr während der Coding-Session Probleme haben oder eine kleine Stütze benötigen, dann könnt ihr in den jeweiligen **solutions** Ordnern Beispiele finden.
 
 ## CheatSheet
-Hier kommen die **npm test** Calls rein.
+Tests für die dritte Aufgabe startet man mittels:
+
+```bash
+npm run test:tasks:03:coverage
+```
