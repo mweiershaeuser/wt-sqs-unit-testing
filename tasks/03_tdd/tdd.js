@@ -30,7 +30,12 @@ export function getWorkingTime(startTime, endTime, breaks = []) {
   let resultHours;
   let resultMinutes;
 
-  // ToDo
+  /**
+   * ToDo:
+   * 1. Erstelle zwei Variablen, um die Anfangszeit und Endzeit seit Tagesbeginn in Minuten zu normalisieren. (HELP: Berechne die Stunden als Minuten)
+   * 2. Erstelle eine IF-Bedingung, um zu überprüfen ob die Startzeit größer gleich der Endzeit ist und lass einen Fehler auswerfen, wenn die Bedingung erfüllt wird.
+   * 3. Berechne die Minuten seit Tagesbeginn durch eine Substraktion der Anfangs- und Endzeit und halte diese. (HELP: Nutze dazu die Konstante result)
+   */
 
   return convertHoursAndMinutesToTimeString(resultHours, resultMinutes);
 }
