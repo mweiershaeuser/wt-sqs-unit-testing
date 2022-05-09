@@ -1,5 +1,5 @@
 import { describe, it, expect } from "@jest/globals";
-import Week from "../../src/week";
+import Week from "../src/week";
 
 describe("Week", () => {
   let week;

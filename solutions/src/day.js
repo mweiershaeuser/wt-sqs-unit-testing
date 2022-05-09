@@ -1,4 +1,4 @@
-import { getWorkingTime } from "../solutions/03_tdd/tdd";
+import { getWorkingTime } from "../03_tdd/tdd";
 
 export default class Day {
   date;
