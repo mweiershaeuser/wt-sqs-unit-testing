@@ -1,6 +1,6 @@
 import { describe, it, expect } from "@jest/globals";
-import Day from "../src/day";
 import { getWorkingTime } from "../03_tdd/tdd";
+import Day from "../src/day";
 
 jest.mock("../03_tdd/tdd");
 
