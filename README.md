@@ -2,7 +2,7 @@
 
 Willkommen im Repository zum Workshop "Softwarequalitätssicherung durch Unit Testing". Der Workshop behandelt Motivation zu und Relevanz sowie Konzeption und Umsetzung von Unit Tests anhand praktischer Beispiele im JavaScript-Kontext. Dazu wird das Testing-Framework [Jest](https://jestjs.io/) genutzt. Das vorliegende Repository enthält alle Materialien, die zur Teilnahme des Workshops notwendig sind. Bitte behandle die unten stehende Setup-Guide vor Workshop-Beginn.
 
-Der Workshop wurde im Rahmen des Moduls "Web Technologien" des Studiengangs Medieninformatik (Master) mit Schwerpunkt Weaving the Web an der Technischen Hochschule Köln (TH Köln) konzipiert.
+Der Workshop wurde im Rahmen des Moduls "Web Technologien" des Studiengangs Medieninformatik (Master) mit Schwerpunkt Weaving the Web im Sommersemester 2022 an der Technischen Hochschule Köln (TH Köln) konzipiert.
 
 **Ansprechpartner**
 
