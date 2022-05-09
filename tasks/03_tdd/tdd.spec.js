@@ -2,16 +2,16 @@ import { describe, it, expect } from "@jest/globals";
 import { getWorkingTime } from "./tdd";
 
 describe("getWorkingTime()", () => {
-  it("should return '08:00' for given startTime '09:00' and endTime '17:00'.", () => {
-    expect(getWorkingTime("09:00", "17:00h")).toBe("08:00");
+  it("should return 8 hours for given startTime '09:00' and endTime '17:00'.", () => {
+    expect(getWorkingTime("09:00", "17:00h")).toBe(8);
   });
 
-  it("should return '08:15' for given startTime '08:30' and endTime '16:45'.", () => {
-    expect(getWorkingTime("08:30", "16:45")).toBe("08:15");
+  it("should return 8 hours and 15 minutes for given startTime '08:30' and endTime '16:45'.", () => {
+    expect(getWorkingTime("08:30", "16:45")).toBe(8.25);
   });
 
-  it("should return '07:55' for given startTime '09:15' and endTime '17:10'.", () => {
-    expect(getWorkingTime("09:15", "17:10h")).toBe("07:55");
+  it("should return 7 hours and 55 minutes for given startTime '09:15' and endTime '17:10'.", () => {
+    expect(getWorkingTime("09:15", "17:10h")).toBe(7 + 55 / 60);
   });
 
   describe("should throw error", () => {
@@ -29,16 +29,16 @@ describe("getWorkingTime()", () => {
   });
 
   describe("with given breaks", () => {
-    it("should return '08:00' for given startTime '09:00', endTime '17:30' and 30 minutes break.", () => {
-      expect(getWorkingTime("09:00", "17:30h", [30])).toBe("08:00");
+    it("should return 8 hours for given startTime '09:00', endTime '17:30' and 30 minutes break.", () => {
+      expect(getWorkingTime("09:00", "17:30h", [30])).toBe(8);
     });
 
-    it("should return '07:40' for given startTime '09:00', endTime '17:30' and 30 and 20 minutes break.", () => {
-      expect(getWorkingTime("09:00", "17:30h", [30, 20])).toBe("07:40");
+    it("should return 7 hours and 40 minutes for given startTime '09:00', endTime '17:30' and 30 and 20 minutes break.", () => {
+      expect(getWorkingTime("09:00", "17:30h", [30, 20])).toBe(7 + 40 / 60);
     });
 
-    it("should return '06:50' for given startTime '09:00', endTime '17:30' and 30, 20 and 50 minutes break.", () => {
-      expect(getWorkingTime("09:00", "17:30h", [30, 20, 50])).toBe("06:50");
+    it("should return 6 hours and 50 minutes for given startTime '09:00', endTime '17:30' and 30, 20 and 50 minutes break.", () => {
+      expect(getWorkingTime("09:00", "17:30h", [30, 20, 50])).toBe(6 + 50 / 60);
     });
 
     it("should throw error for given startTime '09:00', endTime '10:00' and 61 minutes break.", () => {
