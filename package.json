@@ -30,7 +30,7 @@
     "test:solutions": "jest solutions",
     "test:solutions:coverage": "jest --coverage solutions",
     "test:solutions:01": "jest solutions/01_basics",
-    "test:solutions:01:coverage": "jest --coverage --detectOpenHandles solutions/01_basics",
+    "test:solutions:01:coverage": "jest --coverage solutions/01_basics",
     "test:solutions:02": "jest solutions/02_coverage",
     "test:solutions:02:coverage": "jest --coverage solutions/02_coverage",
     "test:solutions:03": "jest solutions/03_tdd",
