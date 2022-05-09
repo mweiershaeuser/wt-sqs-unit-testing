@@ -1,5 +1,5 @@
 import { describe, it, expect } from "@jest/globals";
-import Day from "./day";
+import Day from "../../src/day";
 
 describe("Day", () => {
   let day;

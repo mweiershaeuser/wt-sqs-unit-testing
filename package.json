@@ -19,6 +19,8 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:demo": "jest demo",
+    "test:demo:coverage": "jest --coverage demo",
     "test:tasks": "jest tasks",
     "test:tasks:coverage": "jest --coverage tasks",
     "test:tasks:01": "jest tasks/01_basics",
