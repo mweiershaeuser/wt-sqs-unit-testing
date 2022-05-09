@@ -65,6 +65,9 @@ describe("Week", () => {
      * 2. Erstelle eine Test Methode, die testet, wenn die Summe der gearbeiteten Stunden größer als die des Wochenziels ist.
      * 2.1 Rufe jeweils die Methode .mockImplementation mit Funktionen, die 40 bzw. 42 zurückgeben, als Parameter auf den oben erstellten Spies auf.
      * 2.2 Diese Test-Methode erwartet (expect) anschließend, dass in der Woche (week) die erfüllten Stunden (.hoursFullfilled()) wahr (.toBeTruthy()) sind.
+     * 3. Erstelle eine Test Methode, die testet, wenn die Summe der gearbeiteten Stunden kleiner als die des Wochenziels ist.
+     * 3.1 Rufe jeweils die Methode .mockImplementation mit Funktionen, die 40 bzw. 37 zurückgeben, als Parameter auf den oben erstellten Spies auf.
+     * 3.2 Diese Test-Methode erwartet (expect) anschließend, dass in der Woche (week) die erfüllten Stunden (.hoursFullfilled()) wahr (.toBeFalsy()) sind.
      */
   });
 });
