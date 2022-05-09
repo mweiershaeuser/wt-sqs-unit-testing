@@ -12,7 +12,8 @@ export default class Day {
     this.date = date;
   }
 
-  getWorkingTime = () => getWorkingTime(this.startTime, this.endTime, breaks);
+  getWorkingTime = () =>
+    getWorkingTime(this.startTime, this.endTime, this.breaks);
 
   async isHoliday() {
     const response = await fetch(
