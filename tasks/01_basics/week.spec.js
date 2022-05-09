@@ -24,7 +24,7 @@ describe("Week", () => {
        * 1.1 Rufe die Spy-Methode (.spyOn) des jest Objekts auf.
        * 1.2 Innerhalb der Spy-Methode übergibst du als ersten Parameter den jeweiligen Tag (.days[x]) im Testobjekt (week).
        * 1.3 Der zweite Parameter der Spy-Methode ist der Methodenname als String. (HELP: "getWorkingTime" könnte hier gut rein passen ;) )
-       * 1.4 Als letzten Schritt, rufe die Methode .mockImplementation auf und übergibt eine Funktion, die den gewünschten Mock-Wert (z. B. 0) zurückgibt.
+       * 1.4 Als letzten Schritt, rufe die Methode .mockImplementation auf und übergib eine Funktion, die den gewünschten Mock-Wert (z. B. 0) zurückgibt.
        */
     });
 
