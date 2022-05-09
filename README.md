@@ -46,7 +46,7 @@ npm install
 Die geschriebenen Tests können mittels der Jest-CLI ausgeführt werden. Für diesen Workshop wurden für alle notwendigen CLI-Befehle npm-Skripte geschrieben, die dem folgenden Muster folgen:
 
 ```bash
-npm run test:<task | solutions>:<0x>:<coverage>
+npm run test:<tasks | solutions>:<0x>:<coverage>
 ```
 
 Dadurch können alle Aufgaben und Lösungen variabel einzeln oder gemeinsam mit optionaler Coverage-Erfassung ausgeführt werden.
