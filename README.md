@@ -32,6 +32,7 @@ npm install
 
 ```
 📂 wt-sqs-unit-testing
+|-- 📂 slides               // Folien
 |-- 📂 solutions            // Lösungen, äquivalente Struktur zu tasks
 |-- 📂 tasks                // Aufgaben
     |-- 📂 00_demo          // genutzter Beispiel- und Referenz-Code
